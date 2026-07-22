@@ -34,4 +34,5 @@ let package = Package(name: "AFNetworking",
                                           targets: ["AFNetworking"])],
                       targets: [.target(name: "AFNetworking",
                                         path: "AFNetworking",
-                                        publicHeadersPath: "")])
+                                        publicHeadersPath: "",
+                                        cSettings: [.unsafeFlags(["-Wno-non-modular-include-in-framework-module"])])])
